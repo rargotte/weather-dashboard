@@ -171,7 +171,7 @@ function fillUpCard(data) {
 
         var cardIcon = document.createElement("img");
         cardIcon.setAttribute("class", "card-img-top");
-        cardIcon.setAttribute( "src", "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
+        cardIcon.setAttribute( "src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
         cardBodyEl.appendChild(cardIcon);
 
         var cardTempEl = document.createElement("p");
@@ -210,7 +210,7 @@ function fillUpCard(data) {
 function weatherFetch() {
 
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
     if (city !== "") {
         fetch(queryURL)
             .then(function (response) {
